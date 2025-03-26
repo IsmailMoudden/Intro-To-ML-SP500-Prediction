@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error
 import numpy as np
 
 
-sp500 = yf.download('^GSPC', start='2025-01-01', end='2025-03-25')
+sp500 = yf.download('^GSPC', start='2024-01-01', end='2025-03-25')
 
 sp500['SMA20'] = sp500['Close'].rolling(window=20).mean()
 sp500.dropna(inplace=True)

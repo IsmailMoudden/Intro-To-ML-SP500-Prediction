@@ -1,8 +1,11 @@
 # Error Metrics
 
-### **MSE (Mean Squared Error)**  
-MSE measures the average squared difference between the predicted values and the actual values.  
+## **MSE (Mean Squared Error)**
+
+MSE measures the average squared difference between the predicted values and the actual values.
+
 - **Formula:**  
+  
   MSE = (1/n) * Σ(yᵢ - ŷᵢ)²  
   where:  
   - n is the number of data points  
@@ -11,13 +14,17 @@ MSE measures the average squared difference between the predicted values and the
 - **Purpose:** A lower MSE indicates that the model's predictions are closer to the actual values.  
 
 ### **RMSE (Root Mean Squared Error)**  
+
 RMSE is the square root of the MSE and provides an error metric in the same units as the target variable.  
+
 - **Formula:**  
+  
    RMSE = √MSE = √[(1/n) * Σ(yᵢ - ŷᵢ)²]  
   where:  
   - n is the number of data points  
   - yᵢ is the actual value  
-  - ŷᵢ is the predicted value 
+  - ŷᵢ is the predicted value
+  
 - **Purpose:** RMSE is often preferred because it is easier to interpret in the context of the original data.  
 
 ---

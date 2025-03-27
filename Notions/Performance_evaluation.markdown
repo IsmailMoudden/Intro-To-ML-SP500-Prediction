@@ -1,101 +1,92 @@
-# Performance evaluation
+# Performance Evaluation and Time-Series Cross-Validation
 
-## **MSE (Mean Squared Error)**
+This section details the key performance metrics used to assess model accuracy and describes how cross-validation is applied, particularly in a time-series context. Below, we explain the metrics and the rationale behind using specific cross-validation techniques.
 
-MSE measures the average squared difference between the predicted values and the actual values.
+---
 
+## Performance Metrics
+
+### **Mean Squared Error (MSE)**
+
+- **Definition:**  
+  MSE is the average of the squared differences between the actual values and the model’s predictions.  
 - **Formula:**  
-  MSE = (1/n) * Σ(yᵢ - ŷᵢ)²  
-  where:  
-  - n is the number of data points  
-  - yᵢ is the actual value  
-  - ŷᵢ is the predicted value  
+  MSE = (1/n) * Σ (yᵢ - ŷᵢ)²  
+- **Interpretation:**  
+  A lower MSE indicates that the predictions are closer to the actual values. However, because the errors are squared, larger errors have a greater impact on the overall metric.
 
-- **Purpose:**  
-  A lower MSE indicates that the model's predictions are closer to the actual values.  
+### **Root Mean Squared Error (RMSE)**
 
----
-
-## **RMSE (Root Mean Squared Error)**  
-
-RMSE is the square root of the MSE and provides an error metric in the same units as the target variable.
-
+- **Definition:**  
+  RMSE is the square root of the MSE, bringing the error metric back to the original units of the target variable.  
 - **Formula:**  
-  RMSE = √MSE = √[(1/n) * Σ(yᵢ - ŷᵢ)²]  
-  where:  
-  - n is the number of data points  
-  - yᵢ is the actual value  
-  - ŷᵢ is the predicted value  
+  RMSE = √MSE  
+- **Interpretation:**  
+  RMSE is easier to interpret because it represents the average error in the same units as the target. For example, if RMSE equals 5 and the average value is 100, the typical error is about 5 units, or roughly 5%.
 
-- **Purpose:**  
-  RMSE is often preferred because it is easier to interpret in the context of the original data.  
+### **Mean Absolute Error (MAE)**
 
----
+- **Definition:**  
+  MAE calculates the average of the absolute differences between actual values and predictions.  
+- **Interpretation:**  
+  MAE is less sensitive to outliers compared to MSE/RMSE since it does not square the errors. It provides a straightforward interpretation of average error magnitude.
 
-## **Cross-Validation**
+### **Mean Absolute Percentage Error (MAPE)**
 
-### **What is Cross-Validation?**
-
-Cross-validation is a technique used to evaluate the performance of a machine learning model by splitting the dataset into multiple parts (called "folds"). It ensures that the model is tested on data it hasn't seen during training, which helps to check how well the model generalizes to unseen data.
-
----
-
-### **How Does Cross-Validation Work?**
-
-The most common type is **k-fold cross-validation**, which works as follows:
-
-1. **Split the Dataset:**  
-   - Divide the dataset into `k` equal-sized parts (called "folds"). For example, if `k=5`, the dataset is split into 5 parts.
-
-2. **Train and Test the Model:**  
-   - For each fold:
-     - Use `k-1` folds as the training set.
-     - Use the remaining fold as the test set.
-   - Train the model on the training set and evaluate it on the test set.
-
-3. **Repeat for All Folds:**  
-   - Repeat the process `k` times, with each fold being used as the test set exactly once.
-
-4. **Calculate the Average Performance:**  
-   - Compute the performance metric (e.g., RMSE) for each fold.
-   - Take the average of these metrics to get the final evaluation score.
+- **Definition:**  
+  MAPE expresses the average absolute error as a percentage of the actual values.  
+- **Formula:**  
+  MAPE = (100/n) * Σ |(yᵢ - ŷᵢ) / yᵢ|  
+- **Interpretation:**  
+  MAPE is useful for understanding the error in relative terms. A MAPE of 5% indicates that, on average, predictions are off by 5% of the actual value.
 
 ---
 
-### **Why Use Cross-Validation?**
+## Cross-Validation for Time-Series Data
 
-- **Avoid Overfitting:** Ensures the model is not just memorizing the training data but generalizing well to unseen data.
-- **Reliable Evaluation:** Provides a more robust estimate of model performance compared to a single train-test split.
-- **Efficient Use of Data:** All data points are used for both training and testing, maximizing the use of the dataset.
+### **Why Cross-Validation?**
+
+- **Generalization Check:**  
+  Cross-validation is used to ensure that the model performs well on unseen data. It helps detect overfitting by testing the model on different subsets of the data.
+- **Efficient Data Usage:**  
+  By rotating the test set, all available data points are eventually used for both training and validation, which is especially valuable when datasets are limited.
+
+### **Traditional K-Fold vs. TimeSeriesSplit**
+
+- **Traditional K-Fold Cross-Validation:**  
+  - **Process:** Randomly splits the dataset into *k* folds. In each iteration, the model is trained on *k-1* folds and validated on the remaining fold.  
+  - **Limitation:** In time-series data, this approach can mix future data with past data, leading to data leakage and overly optimistic performance estimates.
+
+- **TimeSeriesSplit Cross-Validation:**  
+  - **Process:** Maintains the temporal order of observations. The dataset is split into sequential folds where the training set always contains past data relative to the test set. For example, in a 5-fold TimeSeriesSplit:
+    - Fold 1: Train on the first portion of the data, test on the subsequent block.
+    - Fold 2: Train on a larger window including the first test block, then test on the next block.
+    - And so on.
+  - **Benefits:**  
+    - **Prevents Data Leakage:** Since the model is only exposed to past data during training.
+    - **Realistic Performance Assessment:** Simulates how the model would perform in a live setting where future data is unknown.
+  - **Example Outcome:**  
+    Suppose the RMSE values from TimeSeriesSplit are [5.3, 4.9, 5.1, 5.4, 5.0]. The mean RMSE provides a robust estimate of the model’s error, and the standard deviation indicates the consistency of the performance across different time periods.
+
+### **Implementing Cross-Validation in Practice**
+
+When applying cross-validation in a time-series context, it’s important to:
+
+- Use **TimeSeriesSplit** to maintain the order of data.
+- Calculate performance metrics (e.g., RMSE, MAE) for each split.
+- Aggregate the results (mean and standard deviation) to understand both the typical error and its variability over time.
 
 ---
 
-### **How to Implement Cross-Validation in Python**
+## Summary
 
-Here’s how you can implement **k-fold cross-validation** using `cross_val_score` from `sklearn`:
+- **Performance Metrics:**  
+  - **MSE** and **RMSE** highlight the average prediction error, with RMSE being more intuitive due to its unit consistency.
+  - **MAE** offers a more robust measure against outliers.
+  - **MAPE** provides insights into the error in percentage terms.
+  
+- **Cross-Validation:**  
+  - **K-Fold** can be used for general datasets but is less appropriate for time-series data due to potential data leakage.
+  - **TimeSeriesSplit** respects the temporal sequence, offering a more realistic evaluation of how the model will perform on future data.
 
-```python
-from sklearn.model_selection import cross_val_score
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics import make_scorer, mean_squared_error
-import numpy as np
-
-# Define the model
-model = # Your model
-
-# Define the scoring metric (negative MSE because cross_val_score minimizes by default)
-scorer = make_scorer(mean_squared_error, greater_is_better=False)
-
-# Perform 5-fold cross-validation
-cv_scores = cross_val_score(model, X, y, cv=5, scoring=scorer)
-
-# Convert negative MSE to positive RMSE
-rmse_scores = np.sqrt(-cv_scores)
-
-# Print the results
-print(f"Cross-Validation RMSE Scores: {rmse_scores}")
-print(f"Mean RMSE: {rmse_scores.mean():.2f}")
-print(f"Standard Deviation of RMSE: {rmse_scores.std():.2f}")
-
-
-
+By integrating these evaluation metrics and using time-series-aware cross-validation, you can rigorously assess model performance and ensure that predictions are both accurate and reliable in real-world scenarios.

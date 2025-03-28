@@ -1,38 +1,84 @@
-# Notions du Projet ML-Model-for-S-P-500-prediction
+# ML Model for S&P 500 Price Prediction
 
-Ce projet vise à développer des modèles simples de machine learning pour prédire la valeur de clôture de l'indice S&P500. L'approche repose sur des notions de base en data science, telles que :
+This project demonstrates simple machine learning approaches to predict the closing price of the S&P 500 index. It serves as an educational exploration of basic data science concepts, with implementations that are deliberately straightforward to highlight fundamental principles.
 
-- **Collecte et Prétraitement des données**  
-  Les données financières sont récupérées via la librairie **yfinance**. Ensuite, plusieurs indicateurs techniques sont calculés pour enrichir le jeu de données.
+## Project Overview
 
-- **Extraction d'indicateurs techniques**  
-  - **SMA20 (Simple Moving Average sur 20 jours)** : Cet indicateur lisse les variations du prix et permet de dégager une tendance à court terme.  
-  - **RSI (Relative Strength Index)** : Un oscillateur qui mesure la vitesse et la variation des mouvements de prix, aidant à identifier des situations de surachat ou de survente.  
-  - **MACD (Moving Average Convergence Divergence)** : (Optionnel dans certaines versions) Cet indicateur combine deux moyennes mobiles pour détecter les changements de momentum et la convergence/divergence des tendances.
+The implementation focuses on two prediction models - Linear Regression and Random Forest - which are applied to historical S&P 500 data enhanced with technical indicators. All concepts used in this project are documented in the `Notions` directory for reference.
 
-- **Séparation des données**  
-  L'ensemble des données est divisé en jeux d'entraînement et de test à l'aide de `train_test_split` afin d'évaluer les performances du modèle.
+## Key Concepts
 
-- **Modélisation**  
-  Deux approches principales sont mises en œuvre pour la prédiction :
+### Data Collection and Preprocessing
+Financial data is retrieved using the **yfinance** library. The preprocessing workflow includes:
+- Loading historical S&P 500 data
+- Creating technical indicators
+- Managing missing values
+- Detecting and filtering outliers
+- Date-based feature engineering
 
-  ## 1. Régression Linéaire (`linear-RegV2.py`)
-  
-  - **Objectif** : Utiliser un modèle linéaire pour établir une relation simple entre les features et la valeur de clôture du S&P500.
-  - **Features utilisées** :  
-    - *Days* : Le nombre de jours écoulés depuis le début de la période.
-    - *SMA20* : La moyenne mobile sur 20 jours.
-    - *RSI* : Le Relative Strength Index.
-    - (Optionnellement, on peut ajouter le MACD, pour mesurer le momentum.)
-  - **Évaluation** : La performance du modèle est mesurée en calculant l'erreur quadratique moyenne racine (**RMSE**).
+For detailed information, see [`Notions/Data_Handeling.markdown`](Notions/Data_Handeling.markdown).
 
-  ## 2. Random Forest (`randomForest.py`)
-  
-  - **Objectif** : Utiliser un modèle d'ensemble (RandomForestRegressor) qui combine plusieurs arbres de décision pour capturer des relations non linéaires dans les données.
-  - **Features utilisées** :  
-    - De façon similaire au modèle linéaire, des features telles que *Days*, *SMA20*, *RSI* et potentiellement *MACD* sont utilisées pour l'entraînement.
-  - **Évaluation** : Le modèle est évalué par le calcul du RMSE afin de mesurer la précision des estimations.
+### Technical Indicators
+We utilize several technical indicators to enhance the dataset:
+- **SMA** (Simple Moving Averages): SMA20, SMA50, and SMA100 for short, medium, and long-term trends
+- **RSI** (Relative Strength Index): Measuring price movement speed and magnitude
+- **MACD** (Moving Average Convergence Divergence): Optional in some implementations
 
-Ces deux modèles sont conçus pour permettre une comparaison entre une approche simple (régression linéaire) et une approche plus robuste (Random Forest) en vue de déterminer laquelle fournit de meilleures prédictions pour les mouvements de l'indice S&P500.
+Learn more about these indicators in [`Notions/technical_indicator.markdown`](Notions/technical%20_indicator.markdown).
 
-N'hésitez pas à expérimenter en modifiant les features ou en ajustant les paramètres des modèles afin d'améliorer leurs performances.
+### Model Validation
+Both models utilize:
+- Train-test splitting with consideration for temporal sequence
+- Cross-validation with both K-Fold and TimeSeriesSplit approaches
+- Multiple performance metrics (RMSE, MAE, MAPE)
+
+More details about validation methods in [`Notions/Performance_evaluation.markdown`](Notions/Performance_evaluation.markdown).
+
+## Models Implemented
+
+### 1. Linear Regression
+**Directory**: [`Linear_Models/Linear_Regression/`](Linear_Models/Linear_Regression/)
+
+- **RSI_SMA.py**: Implements linear regression with multiple features (SMA20/50/100, RSI, Days)
+- **SMA.py**: Simpler implementation using only SMA features
+
+Linear regression establishes a direct linear relationship between features and the target price. While simple, it provides a useful baseline and offers high interpretability.
+
+Learn more about linear regression in [`Notions/Models/Linear_Regression`](Notions/Models/Linear_Regression).
+
+### 2. Random Forest
+**Directory**: [`Random_Forest/`](Random_Forest/)
+
+- **RSI_SMA.py**: Random forest implementation with multiple features
+- **SMA.py**: Implementation with only SMA features
+
+Random Forest captures more complex relationships in the data through an ensemble of decision trees. This typically provides better predictive performance at the cost of reduced interpretability.
+
+More details about random forest in [`Notions/Models/Random_Forest`](Notions/Models/Random_Forest).
+
+## Performance Evaluation
+
+Both models are evaluated using:
+- **RMSE** (Root Mean Squared Error): Indicates the average prediction error in index points
+- **Cross-validation**: Used to assess generalizability across different time periods
+- **MAE** and **MAPE**: Additional metrics for comprehensive evaluation
+
+## Getting Started
+
+To run these models:
+
+1. Ensure you have Python 3.x and the necessary libraries installed (pandas, numpy, scikit-learn, matplotlib, yfinance, ta)
+2. Clone this repository
+3. Run the model scripts in either the Linear_Models or Random_Forest directories
+
+## Further Experimentation
+
+These models are intentionally basic to highlight fundamental principles. Consider experimenting with:
+- Additional technical indicators
+- Feature selection techniques
+- Hyperparameter optimization
+- More sophisticated models like Gradient Boosting or Neural Networks
+
+## About the S&P 500
+
+For information about what the S&P 500 is and how to interpret predictions, see [`Notions/About_S&P500.markdown`](Notions/About_S&P500.markdown).

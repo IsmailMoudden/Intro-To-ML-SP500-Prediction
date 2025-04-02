@@ -40,6 +40,15 @@ This section details the key performance metrics used to assess model accuracy a
 - **Interpretation:**  
   MAPE is useful for understanding the error in relative terms. A MAPE of 5% indicates that, on average, predictions are off by 5% of the actual value.
 
+### **Coefficient of Determination (R² Score)**
+
+- **Définition :**  
+  Le R² score représente la proportion de la variance totale de la variable cible qui est expliquée par les caractéristiques du modèle.
+- **Interprétation :**  
+  Une valeur de R² proche de 1 indique que le modèle explique une grande partie de la variance, tandis qu'une valeur proche de 0 suggère une faible capacité explicative.
+- **Utilisation :**  
+  Le R² est utilisé en complément du RMSE, MAE et MAPE pour fournir une mesure globale de la performance du modèle.
+
 ---
 
 ## Cross-Validation for Time-Series Data
@@ -78,12 +87,21 @@ When applying cross-validation in a time-series context, it’s important to:
 
 ---
 
+## Détails des Calculs de Performance
+
+- Pour estimer la performance d'un modèle, nous utilisons l'erreur quadratique moyenne (MSE) qui calcule la moyenne des carrés des écarts entre les valeurs réelles et prédites.
+- La racine de la MSE (RMSE) est obtenue en appliquant np.sqrt(-score) car la fonction de scoring retourne une MSE négative (afin que "greater_is_better" soit respecté). Cela permet de ramener l'erreur dans la même unité que la cible.
+- La notation "-1" (par exemple, en utilisant iloc[-1]) est employée pour accéder à la dernière valeur d'un DataFrame. Ceci est essentiel pour récupérer la dernière valeur calculée d'un indicateur technique et ainsi prédire le prix du jour suivant.
+
+---
+
 ## Summary
 
 - **Performance Metrics:**  
   - **MSE** and **RMSE** highlight the average prediction error, with RMSE being more intuitive due to its unit consistency.
   - **MAE** offers a more robust measure against outliers.
   - **MAPE** provides insights into the error in percentage terms.
+  - **R² Score** complements these metrics by providing a measure of the proportion of variance explained by the model.
   
 - **Cross-Validation:**  
   - **K-Fold** can be used for general datasets but is less appropriate for time-series data due to potential data leakage.

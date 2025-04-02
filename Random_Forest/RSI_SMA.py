@@ -4,13 +4,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, cross_val_score, TimeSeriesSplit
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, mean_absolute_error, make_scorer
+from sklearn.metrics import mean_squared_error, mean_absolute_error, make_scorer, r2_score
 from sklearn.preprocessing import StandardScaler
 from scipy.stats import zscore
 import ta
 
 # Download historical S&P 500 data from Yahoo Finance
 sp500 = yf.download('^GSPC', start='2010-01-01', end='2025-03-25')
+print(sp500.head())
 
 # Calculate technical indicators: Simple Moving Averages and RSI
 sp500['SMA20'] = sp500['Close'].rolling(window=20).mean()   # 20-day SMA for short-term trends
@@ -18,10 +19,14 @@ sp500['SMA50'] = sp500['Close'].rolling(window=50).mean()   # 50-day SMA for med
 sp500['SMA100'] = sp500['Close'].rolling(window=100).mean() # 100-day SMA for long-term trends
 sp500['RSI'] = ta.momentum.RSIIndicator(sp500['Close'].squeeze(), window=14).rsi()  # 14-day RSI
 
-# Remove rows with missing values (created by technical indicator calculations)
+# Calculate MACD indicators
+macd = ta.trend.MACD(sp500['Close'], window_slow=26, window_fast=12, window_sign=9)
+sp500['MACD'] = macd.macd()
+sp500['MACD_Signal'] = macd.macd_signal()
+sp500['MACD_Diff'] = macd.macd_diff()
+
 sp500.dropna(inplace=True)
 
-# Remove outliers using the z-score for selected features
 features_to_check = ['SMA20', 'SMA50', 'SMA100', 'RSI', 'Close']
 z_scores = np.abs(zscore(sp500[features_to_check]))
 threshold = 3  # Remove points that are more than 3 standard deviations away
@@ -32,7 +37,7 @@ sp500['Date'] = sp500.index
 sp500['Days'] = (sp500['Date'] - sp500['Date'].min()).dt.days
 
 # Define the features (X) and the target variable (y)
-X = sp500[['Days', 'SMA20', 'SMA50', 'SMA100', 'RSI']]
+X = sp500[['Days', 'SMA20', 'SMA50', 'SMA100', 'RSI', 'MACD_Diff']]
 y = sp500['Close'].values.ravel() 
 
 # Standardize features for better model performance
@@ -76,10 +81,12 @@ rmse = np.sqrt(mse)
 mae = mean_absolute_error(y_test, y_pred)
 epsilon = 1e-10  # small constant to avoid division by zero
 mape = np.mean(np.abs((y_test - y_pred) / (y_test + epsilon))) * 100
+r2 = r2_score(y_test, y_pred)
 
 print(f"RMSE: {rmse:.2f}")
 print(f"MAE: {mae:.2f}")
-print(f"MAPE: {mape:.2f}%\n")
+print(f"MAPE: {mape:.2f}%")
+print(f"R2 Score: {r2:.2f}\n")
 print("Minimum of y_test:", np.min(y_test))
 
 # Predict the closing price for the next day
@@ -91,7 +98,8 @@ future_features = [[
     sp500['SMA20'].iloc[-1],
     sp500['SMA50'].iloc[-1],
     sp500['SMA100'].iloc[-1],
-    sp500['RSI'].iloc[-1]
+    sp500['RSI'].iloc[-1],
+    sp500['MACD_Diff'].iloc[-1]
 ]]
 prediction = model.predict(future_features)
 print(f"Predicted Price for Tomorrow: {prediction[0]:.2f}")

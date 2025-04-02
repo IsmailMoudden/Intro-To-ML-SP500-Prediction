@@ -57,4 +57,30 @@ Technical indicators are essential tools in financial analysis, providing insigh
 
 ---
 
+### Bollinger Bands
+
+- **Description :**  
+  Les Bollinger Bands consistent en une moyenne mobile (souvent un SMA sur 20 jours) entourée de deux bandes placées à un nombre défini d'écarts-types (généralement 2) de part et d'autre.  
+- **But :**  
+  Ils mesurent la volatilité du marché et peuvent indiquer des conditions de surachat ou de survente.  
+- **Utilisation :**  
+  Lorsque le cours touche la bande supérieure, cela peut indiquer un niveau de surachat; s’il touche la bande inférieure, il peut suggérer une situation de survente.
+
+---
+
+## Explications des Calculs Techniques
+
+- **RSI (Relative Strength Index) :**  
+  Le RSI est calculé en comparant la moyenne des gains et la moyenne des pertes sur une période donnée (souvent 14 jours). La formule standard est :  
+  RSI = 100 - (100 / (1 + (avg_gain/avg_loss)))  
+  Ici, "avg_gain" et "avg_loss" représentent respectivement la moyenne des gains et pertes sur la période. La soustraction du résultat à 100 permet d'obtenir un indice où 0 indique une forte pression baissière et 100 une forte pression haussière.
+
+- **MACD (Moving Average Convergence Divergence) :**  
+  Le MACD est obtenu en soustrayant la moyenne mobile exponentielle (EMA) à 26 jours de l'EMA à 12 jours. Ensuite, une ligne de signal est calculée en prenant l'EMA du MACD sur 9 jours. La « MACD Diff » (différence entre le MACD et sa ligne de signal) met en évidence l'intensité de la tendance.
+
+- **Utilisation de -1 :**  
+  L'usage de "-1" avec des méthodes comme iloc[-1] permet de sélectionner la dernière valorisation calculée. Cela garantit que, pour la prédiction, nous utilisons les indicateurs les plus récents (par exemple, le dernier SMA ou RSI).
+
+---
+
 By combining these indicators, analysts can gain a well-rounded view of market conditions, making it easier to spot potential trading opportunities or warning signs.

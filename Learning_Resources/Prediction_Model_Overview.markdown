@@ -77,4 +77,38 @@ These design choices are elaborated upon in the corresponding model and technica
 
 ---
 
+# Understanding Model.fit() and Model.predict()
+
+## General Concept
+
+- **fit(X, y)**
+  - The `fit` method is used to train a model on your dataset.
+  - It takes in training data (features X and often target y) and adjusts the model’s internal parameters to best capture the patterns in the data.
+  - For example, in regression, it calculates coefficients that minimize the error between predictions and actual values.
+
+- **predict(X)**
+  - After training, the `predict` method uses the learned parameters to make predictions on new or existing data.
+  - It takes input features X and outputs predicted values (or classes, depending on the model).
+
+## In Specific Models
+
+### Linear Regression
+- **fit:**  
+  - Computes the best-fitting straight line by minimizing the Mean Squared Error (MSE) between the predicted and actual outputs.
+  - Learns coefficients (slope and intercept) that define the linear relationship.
+- **predict:**  
+  - Uses the learned slope and intercept to calculate y-values for given x-values, following the equation: y = slope * x + intercept.
+
+### K-means Clustering
+- **fit:**  
+  - Determines the positions of k cluster centroids by grouping the training data.
+  - It iteratively assigns data points to the nearest centroid and then recalculates centroid positions until convergence.
+- **predict:**  
+  - Assigns new data points to the nearest centroid from the ones learned during the fitting process.
+  - The prediction is simply the cluster label indicating the closest cluster.
+
+In summary, regardless of the model type, `fit` is about learning from data, while `predict` applies the learned model to generate outputs.
+
+---
+
 *Ce document sert de guide global pour comprendre la logique et les formules utilisées dans le projet de prédiction du S&P 500.*

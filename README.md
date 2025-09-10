@@ -256,44 +256,6 @@ We welcome contributions from the community! This project thrives on collaborati
 
 ---
 
-## 📈 **Project Statistics**
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=IsmailMoudden&show_icons=true&theme=radical&hide_border=true&include_all_commits=true&count_private=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=IsmailMoudden&layout=compact&theme=radical&hide_border=true&langs_count=6)
-
-![Repository Stats](https://github-readme-stats.vercel.app/api/pin/?username=IsmailMoudden&repo=Intro-To-ML-SP500-Prediction&theme=radical&hide_border=true)
-
----
-
-## 🌟 **Star History**
-
-[![Star History Chart](https://api.star-history.com/svg?repos=IsmailMoudden/Intro-To-ML-SP500-Prediction&type=Date)](https://star-history.com/#IsmailMoudden/Intro-To-ML-SP500-Prediction&Date)
-
----
-
-## 🎯 **Roadmap & Future Plans**
-
-### **🚀 Short Term (Next 3 months)**
-- [ ] **Enhanced backtesting engine** with performance metrics
-- [ ] **Additional ML algorithms** (XGBoost, LightGBM, SVM)
-- [ ] **Performance optimization** for large datasets
-- [ ] **Extended documentation** with video tutorials
-
-### **📈 Medium Term (3-6 months)**
-- [ ] **Deep learning models** (LSTM, GRU, Transformers)
-- [ ] **Real-time data processing** capabilities
-- [ ] **Advanced risk management** and portfolio optimization
-- [ ] **Community features** and discussion forums
-
-### **🌐 Long Term (6+ months)**
-- [ ] **Multi-asset support** beyond S&P 500
-- [ ] **Cloud deployment** and API services
-- [ ] **Mobile applications** for on-the-go learning
-- [ ] **Enterprise features** for educational institutions
-
----
-
 ## 📞 **Contact & Support**
 
 ### **💬 Get Help**

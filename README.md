@@ -1,4 +1,4 @@
-# 🚀 S&P 500 Prediction with Machine Learning
+# S&P 500 Prediction with Machine Learning
 
 > **Educational Project** - Learn Machine Learning through Financial Market Prediction
 
@@ -37,30 +37,30 @@ This is a **comprehensive educational project** that teaches machine learning co
 
 ```
 Intro-To-ML-SP500-Prediction/
-├── 📚 Learning_Resources/           # Educational content & theory
+├──  Learning_Resources/           # Educational content & theory
 │   ├── About_S&P500.md             # Introduction to S&P 500
 │   ├── data_handling.md            # Data processing concepts
 │   ├── technical_indicators.md     # Technical analysis guide
 │   └── Models/                     # Algorithm explanations
-├── 🔧 data/                         # Data pipeline & processing
+├── data/                         # Data pipeline & processing
 │   ├── data_pipeline.py            # Complete data workflow
 │   ├── raw/                        # Downloaded data cache
 │   └── processed/                  # Cleaned datasets
-├── 🤖 Clustering/                   # K-means clustering models
+├──  Clustering/                   # K-means clustering models
 │   ├── K-means.py                  # Market regime identification
 │   └── *.png                       # Visualization outputs
-├── 📈 Regression_Models/            # Linear regression models
+├── Regression_Models/            # Linear regression models
 │   ├── Examples/                   # Guided tutorials
 │   └── Implementation/             # Full implementations
-├── 🌳 Ensemble_Models/              # Random Forest models
+├── Ensemble_Models/              # Random Forest models
 │   ├── Examples/                   # Guided tutorials
 │   └── Implementation/             # Full implementations
-├── 📊 notebooks/                    # Jupyter notebooks for analysis
+├──  notebooks/                    # Jupyter notebooks for analysis
 │   ├── 01_exploratory_analysis.ipynb
 │   └── 02_model_comparison.ipynb
-├── ⚙️ config/                       # Configuration files
+├──  config/                       # Configuration files
 │   └── config.yaml                 # Centralized settings
-├── 🧪 tests/                        # Unit & integration tests
+├── tests/                        # Unit & integration tests
 └── 📋 evaluation/                   # Performance metrics & backtesting
 ```
 
@@ -69,25 +69,25 @@ Intro-To-ML-SP500-Prediction/
 ## 🚀 **Key Features**
 
 ### 📊 **Advanced Data Pipeline**
-- **🔄 Automated data collection** from Yahoo Finance with intelligent caching
-- **📈 50+ technical indicators** including RSI, MACD, Bollinger Bands, SMA/EMA
-- **🧹 Data preprocessing** with missing value handling and outlier detection
-- **⚡ Feature engineering** with lag features, rolling statistics, and interactions
-- **⏰ Temporal data handling** respecting time series integrity
+- **Automated data collection** from Yahoo Finance with intelligent caching
+- **50+ technical indicators** including RSI, MACD, Bollinger Bands, SMA/EMA
+- **Data preprocessing** with missing value handling and outlier detection
+- **Feature engineering** with lag features, rolling statistics, and interactions
+- **Temporal data handling** respecting time series integrity
 
 ### 🤖 **Machine Learning Models**
-- **🎯 K-means Clustering**: Identify market regimes (bull/bear/sideways)
-- **📊 Linear Regression**: Price prediction with technical indicators
-- **🌳 Random Forest**: Ensemble classification for market direction
-- **✅ Cross-validation**: Time-series aware validation to prevent data leakage
-- **📊 Performance metrics**: RMSE, MAE, R², accuracy, precision, recall
+- **K-means Clustering**: Identify market regimes (bull/bear/sideways)
+- **Linear Regression**: Price prediction with technical indicators
+- **Random Forest**: Ensemble classification for market direction
+- **Cross-validation**: Time-series aware validation to prevent data leakage
+- **Performance metrics**: RMSE, MAE, R², accuracy, precision, recall
 
 ### 📚 **Comprehensive Learning Resources**
-- **📖 Step-by-step tutorials** for each concept and algorithm
-- **🧮 Mathematical explanations** with formulas and derivations
-- **💻 Practical examples** with real S&P 500 data
-- **📊 Performance evaluation** guides and best practices
-- **🔍 Interactive notebooks** for hands-on learning
+- **Step-by-step tutorials** for each concept and algorithm
+- **Mathematical explanations** with formulas and derivations
+- **Practical examples** with real S&P 500 data
+- **Performance evaluation** guides and best practices
+- **Interactive notebooks** for hands-on learning
 
 ---
 
@@ -132,19 +132,19 @@ pip install -r requirements.txt
 python -c "import pandas, numpy, sklearn; print('✅ All packages installed successfully!')"
 ```
 
-### **🎯 Quick Start Examples**
+### **Quick Start Examples**
 
 ```bash
-# 🎯 K-means Clustering - Market Regime Analysis
+# K-means Clustering - Market Regime Analysis
 python Clustering/K-means.py
 
-# 📈 Linear Regression - Price Prediction
+# Linear Regression - Price Prediction
 python Regression_Models/Linear_Regression/Examples/LR_Guided_Eexample.py
 
-# 🌳 Random Forest - Market Direction Classification
+# Random Forest - Market Direction Classification
 python Ensemble_Models/Examples/RF_Guided_Example.py
 
-# 📊 Interactive Analysis with Jupyter
+# Interactive Analysis with Jupyter
 jupyter notebook notebooks/
 ```
 
@@ -153,26 +153,26 @@ jupyter notebook notebooks/
 ## 🎓 **Learning Path**
 
 ### **🟢 Beginner Level (0-2 weeks)**
-1. **📚 Start Here**: Read `Learning_Resources/About_S&P500.md`
-2. **🔧 Data Basics**: Study `Learning_Resources/data_handling.md`
-3. **💻 Run Examples**: Execute basic examples in each model directory
-4. **📊 Visualize**: Understand the generated charts and outputs
+1. **Start Here**: Read `Learning_Resources/About_S&P500.md`
+2. **Data Basics**: Study `Learning_Resources/data_handling.md`
+3. **Run Examples**: Execute basic examples in each model directory
+4. **Visualize**: Understand the generated charts and outputs
 
 **Skills You'll Learn**: Basic Python, data loading, simple ML concepts
 
 ### **🟡 Intermediate Level (2-6 weeks)**
-1. **📈 Technical Analysis**: Master `Learning_Resources/technical_indicators.md`
-2. **🤖 Algorithm Theory**: Study `Learning_Resources/Models/` documentation
-3. **🔧 Customization**: Modify model parameters and add features
-4. **📊 Analysis**: Use notebooks for exploratory data analysis
+1. **Technical Analysis**: Master `Learning_Resources/technical_indicators.md`
+2. **Algorithm Theory**: Study `Learning_Resources/Models/` documentation
+3. **Customization**: Modify model parameters and add features
+4. **Analysis**: Use notebooks for exploratory data analysis
 
 **Skills You'll Learn**: Technical indicators, ML algorithms, data analysis
 
 ### **🔴 Advanced Level (6+ weeks)**
-1. **🚀 Innovation**: Create new ML algorithms and approaches
-2. **📊 Backtesting**: Build custom trading strategy backtesting
-3. **⚡ Optimization**: Implement hyperparameter tuning
-4. **🌐 Deployment**: Deploy models in production environments
+1. **Innovation**: Create new ML algorithms and approaches
+2. **Backtesting**: Build custom trading strategy backtesting
+3. **Optimization**: Implement hyperparameter tuning
+4. **Deployment**: Deploy models in production environments
 
 **Skills You'll Learn**: Advanced ML, backtesting, production deployment
 
@@ -180,21 +180,21 @@ jupyter notebook notebooks/
 
 ## 📊 **Example Outputs**
 
-### **🎯 K-means Clustering Results**
+### **K-means Clustering Results**
 ![K-means Clustering](Clustering/kmeans_clusters.png)
 - **Market regime identification** (bull/bear/sideways markets)
 - **Cluster visualization** with interactive plots
 - **Performance metrics** and strategy recommendations
 - **Risk assessment** for different market conditions
 
-### **📈 Prediction Model Results**
+### **Prediction Model Results**
 ![Model Predictions](Clustering/kmeans_prediction.png)
 - **Price forecasts** with confidence intervals
 - **Direction classification** (up/down predictions)
 - **Model comparison** with performance metrics
 - **Feature importance** analysis
 
-### **📊 Technical Analysis Dashboard**
+### **Technical Analysis Dashboard**
 ![Technical Analysis](Clustering/kmeans_elbow.png)
 - **Indicator charts** (RSI, MACD, Bollinger Bands)
 - **Signal generation** for trading strategies
@@ -215,7 +215,7 @@ We welcome contributions from the community! This project thrives on collaborati
 - **🔧 Submit Code**: Add new algorithms or improvements
 - **📊 Share Results**: Contribute backtesting results and insights
 
-### **🚀 Contribution Process**
+### **Contribution Process**
 
 1. **Fork** the repository
 2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
@@ -224,7 +224,7 @@ We welcome contributions from the community! This project thrives on collaborati
 5. **Push** to your branch (`git push origin feature/amazing-feature`)
 6. **Open** a Pull Request with detailed description
 
-### **📋 Contribution Guidelines**
+### **Contribution Guidelines**
 
 - **Follow PEP 8** for Python code style
 - **Add tests** for new functionality
@@ -297,12 +297,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **ML practitioners** who shared best practices
 - **Students and learners** who provided feedback
 
-### **🤝 Project Contributors**
-- **GitHub contributors** who improved the code
-- **Community members** who suggested enhancements
-- **Beta testers** who found bugs and issues
-- **Documentation reviewers** who improved clarity
-
 ---
 
 ## 🚀 **Get Started Today!**
@@ -326,7 +320,7 @@ Ready to embark on your machine learning journey with financial data?
 
 <div align="center">
 
-**Made with ❤️ for the ML Learning Community**
+
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IsmailMoudden/Intro-To-ML-SP500-Prediction)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)

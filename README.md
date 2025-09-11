@@ -13,11 +13,11 @@
 
 ---
 
-## 🎯 **About This Project**
+##**About This Project**
 
 This is a **comprehensive educational project** that teaches machine learning concepts through practical applications in financial market prediction. We focus on the S&P 500 index as our primary dataset to provide real-world context for ML learning.
 
-### 🎓 **Educational Mission**
+### **Educational Mission**
 - **Learn ML fundamentals** through financial applications
 - **Understand technical indicators** and their calculations
 - **Implement prediction models** from scratch
@@ -66,7 +66,7 @@ Intro-To-ML-SP500-Prediction/
 
 ---
 
-## 🚀 **Key Features**
+## **Key Features**
 
 ### 📊 **Advanced Data Pipeline**
 - **Automated data collection** from Yahoo Finance with intelligent caching
@@ -106,7 +106,7 @@ Intro-To-ML-SP500-Prediction/
 
 ---
 
-## 📖 **Getting Started**
+## **Getting Started**
 
 ### **Prerequisites**
 ```bash
@@ -178,7 +178,7 @@ jupyter notebook notebooks/
 
 ---
 
-## 📊 **Example Outputs**
+## **Example Outputs**
 
 ### **K-means Clustering Results**
 ![K-means Clustering](Clustering/kmeans_clusters.png)
@@ -207,7 +207,7 @@ jupyter notebook notebooks/
 
 We welcome contributions from the community! This project thrives on collaboration and shared knowledge.
 
-### **🌟 How You Can Contribute**
+### **How You Can Contribute**
 
 - **🐛 Report Bugs**: Help improve code quality
 - **💡 Suggest Features**: Share ideas for new capabilities
@@ -236,19 +236,19 @@ We welcome contributions from the community! This project thrives on collaborati
 
 ## 📚 **Resources & References**
 
-### **📖 Recommended Books**
+### **Recommended Books**
 - **"Python for Finance"** - Yves Hilpisch
 - **"Advances in Financial Machine Learning"** - Marcos Lopez de Prado
 - **"Machine Learning for Asset Managers"** - Marcos Lopez de Prado
 - **"The Elements of Statistical Learning"** - Hastie, Tibshirani, Friedman
 
-### **🌐 Online Courses**
+### **Online Courses**
 - [Coursera: Machine Learning for Trading](https://www.coursera.org/learn/machine-learning-trading)
 - [edX: Financial Engineering and Risk Management](https://www.edx.org/learn/financial-engineering)
 - [Quantopian: Algorithmic Trading](https://www.quantopian.com/)
 - [Fast.ai: Practical Deep Learning](https://course.fast.ai/)
 
-### **👥 Communities & Forums**
+### **Communities & Forums**
 - [QuantConnect](https://www.quantconnect.com/) - Algorithmic trading platform
 - [Kaggle](https://www.kaggle.com/) - Data science competitions
 - [Reddit r/algotrading](https://reddit.com/r/algotrading) - Algorithmic trading discussion
@@ -259,19 +259,19 @@ We welcome contributions from the community! This project thrives on collaborati
 ## 📞 **Contact & Support**
 
 ### **💬 Get Help**
-- **📧 Email**: ismail.moudden1@gmail.com
-- **🐛 GitHub Issues**: [Report bugs or request features](https://github.com/IsmailMoudden/Intro-To-ML-SP500-Prediction/issues)
-- **💭 GitHub Discussions**: [Ask questions and share ideas](https://github.com/IsmailMoudden/Intro-To-ML-SP500-Prediction/discussions)
-- **📖 Documentation**: Check the `Learning_Resources/` directory first
+- **Email**: ismail.moudden1@gmail.com
+- **GitHub Issues**: [Report bugs or request features](https://github.com/IsmailMoudden/Intro-To-ML-SP500-Prediction/issues)
+- **GitHub Discussions**: [Ask questions and share ideas](https://github.com/IsmailMoudden/Intro-To-ML-SP500-Prediction/discussions)
+- **Documentation**: Check the `Learning_Resources/` directory first
 
 ### **🔗 Connect With Us**
-- **🐙 GitHub**: [@IsmailMoudden](https://github.com/IsmailMoudden)
-- **💼 LinkedIn**: [Connect professionally](https://linkedin.com/in/ismailmoudden)
-- **🐦 Twitter**: [Follow for updates](https://twitter.com/ismailmoudden)
+- **GitHub**: [@IsmailMoudden](https://github.com/IsmailMoudden)
+- **LinkedIn**: [Connect professionally](https://linkedin.com/in/ismailmoudden)
+- **Twitter**: [Follow for updates](https://twitter.com/ismailmoudden)
 
 ---
 
-## 📄 **License**
+## **License**
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
@@ -285,18 +285,11 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 🙏 **Acknowledgments**
 
-### **🌟 Open Source Community**
+### **Open Source Community**
 - **Scikit-learn team** for the excellent ML library
 - **Pandas & NumPy developers** for data processing tools
 - **Matplotlib & Seaborn creators** for visualization capabilities
 - **YFinance maintainers** for financial data access
-
-### **🎓 Educational Contributors**
-- **Academic researchers** who developed the algorithms
-- **Financial analysts** who created technical indicators
-- **ML practitioners** who shared best practices
-- **Students and learners** who provided feedback
-
 ---
 
 ## 🚀 **Get Started Today!**
@@ -310,7 +303,7 @@ Ready to embark on your machine learning journey with financial data?
 
 ---
 
-## 🎓 **Happy Learning!**
+## **Happy Learning!**
 
 *"The best investment you can make is in yourself." - Warren Buffett*
 

@@ -13,7 +13,7 @@
 
 ---
 
-##**About This Project**
+## **About This Project**
 
 This is a **comprehensive educational project** that teaches machine learning concepts through practical applications in financial market prediction. We focus on the S&P 500 index as our primary dataset to provide real-world context for ML learning.
 

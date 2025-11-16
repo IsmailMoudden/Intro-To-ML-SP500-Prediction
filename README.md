@@ -33,7 +33,7 @@ This is a **comprehensive educational project** that teaches machine learning co
 
 ---
 
-## 🏗️ **Project Architecture**
+## **Project Architecture**
 
 ```
 Intro-To-ML-SP500-Prediction/
@@ -61,28 +61,28 @@ Intro-To-ML-SP500-Prediction/
 ├──  config/                       # Configuration files
 │   └── config.yaml                 # Centralized settings
 ├── tests/                        # Unit & integration tests
-└── 📋 evaluation/                   # Performance metrics & backtesting
+└──  evaluation/                   # Performance metrics & backtesting
 ```
 
 ---
 
 ## **Key Features**
 
-### 📊 **Advanced Data Pipeline**
+### **Advanced Data Pipeline**
 - **Automated data collection** from Yahoo Finance with intelligent caching
 - **50+ technical indicators** including RSI, MACD, Bollinger Bands, SMA/EMA
 - **Data preprocessing** with missing value handling and outlier detection
 - **Feature engineering** with lag features, rolling statistics, and interactions
 - **Temporal data handling** respecting time series integrity
 
-### 🤖 **Machine Learning Models**
+### **Machine Learning Models**
 - **K-means Clustering**: Identify market regimes (bull/bear/sideways)
 - **Linear Regression**: Price prediction with technical indicators
 - **Random Forest**: Ensemble classification for market direction
 - **Cross-validation**: Time-series aware validation to prevent data leakage
 - **Performance metrics**: RMSE, MAE, R², accuracy, precision, recall
 
-### 📚 **Comprehensive Learning Resources**
+### **Comprehensive Learning Resources**
 - **Step-by-step tutorials** for each concept and algorithm
 - **Mathematical explanations** with formulas and derivations
 - **Practical examples** with real S&P 500 data
@@ -91,18 +91,18 @@ Intro-To-ML-SP500-Prediction/
 
 ---
 
-## 🛠️ **Technology Stack**
+## **Technology Stack**
 
 | Category | Technology | Version | Purpose |
 |----------|------------|---------|---------|
-| **🐍 Core Language** | Python | 3.8+ | Primary programming language |
-| **📊 Data Processing** | Pandas, NumPy | Latest | Data manipulation & analysis |
-| **🤖 Machine Learning** | Scikit-learn | Latest | ML algorithms & pipelines |
-| **📈 Visualization** | Matplotlib, Seaborn | Latest | Charts & graphs |
-| **📊 Financial Data** | YFinance, TA-Lib | Latest | Market data & indicators |
-| **📓 Development** | Jupyter | Latest | Interactive development |
-| **🧪 Testing** | Pytest | Latest | Unit & integration testing |
-| **🚀 CI/CD** | GitHub Actions | Latest | Automated testing & deployment |
+| **Core Language** | Python | 3.8+ | Primary programming language |
+| **Data Processing** | Pandas, NumPy | Latest | Data manipulation & analysis |
+| **Machine Learning** | Scikit-learn | Latest | ML algorithms & pipelines |
+| **Visualization** | Matplotlib, Seaborn | Latest | Charts & graphs |
+| **Financial Data** | YFinance, TA-Lib | Latest | Market data & indicators |
+| **Development** | Jupyter | Latest | Interactive development |
+| **Testing** | Pytest | Latest | Unit & integration testing |
+| **CI/CD** | GitHub Actions | Latest | Automated testing & deployment |
 
 ---
 
@@ -110,13 +110,13 @@ Intro-To-ML-SP500-Prediction/
 
 ### **Prerequisites**
 ```bash
-✅ Python 3.8 or higher
-✅ pip package manager
-✅ Git
-✅ Basic understanding of Python
+Python 3.8 or higher
+pip package manager
+Git
+Basic understanding of Python
 ```
 
-### **🚀 Quick Installation**
+### **Quick Installation**
 
 ```bash
 # 1. Clone the repository
@@ -129,7 +129,7 @@ cd Intro-To-ML-SP500-Prediction
 pip install -r requirements.txt
 
 # 4. Verify installation
-python -c "import pandas, numpy, sklearn; print('✅ All packages installed successfully!')"
+python -c "import pandas, numpy, sklearn; print('All packages installed successfully!')"
 ```
 
 ### **Quick Start Examples**
@@ -150,7 +150,7 @@ jupyter notebook notebooks/
 
 ---
 
-## 🎓 **Learning Path**
+## **Learning Path**
 
 ### **🟢 Beginner Level (0-2 weeks)**
 1. **Start Here**: Read `Learning_Resources/About_S&P500.md`
@@ -203,17 +203,17 @@ jupyter notebook notebooks/
 
 ---
 
-## 🤝 **Contributing to the Project**
+## **Contributing to the Project**
 
 We welcome contributions from the community! This project thrives on collaboration and shared knowledge.
 
 ### **How You Can Contribute**
 
-- **🐛 Report Bugs**: Help improve code quality
-- **💡 Suggest Features**: Share ideas for new capabilities
-- **📚 Improve Documentation**: Make concepts clearer for learners
-- **🔧 Submit Code**: Add new algorithms or improvements
-- **📊 Share Results**: Contribute backtesting results and insights
+- **Report Bugs**: Help improve code quality
+- **Suggest Features**: Share ideas for new capabilities
+- **Improve Documentation**: Make concepts clearer for learners
+- **Submit Code**: Add new algorithms or improvements
+- **Share Results**: Contribute backtesting results and insights
 
 ### **Contribution Process**
 
@@ -234,7 +234,7 @@ We welcome contributions from the community! This project thrives on collaborati
 
 ---
 
-## 📚 **Resources & References**
+## **Resources & References**
 
 ### **Recommended Books**
 - **"Python for Finance"** - Yves Hilpisch
@@ -256,15 +256,15 @@ We welcome contributions from the community! This project thrives on collaborati
 
 ---
 
-## 📞 **Contact & Support**
+## **Contact & Support**
 
-### **💬 Get Help**
+### **Get Help**
 - **Email**: ismail.moudden1@gmail.com
 - **GitHub Issues**: [Report bugs or request features](https://github.com/IsmailMoudden/Intro-To-ML-SP500-Prediction/issues)
 - **GitHub Discussions**: [Ask questions and share ideas](https://github.com/IsmailMoudden/Intro-To-ML-SP500-Prediction/discussions)
 - **Documentation**: Check the `Learning_Resources/` directory first
 
-### **🔗 Connect With Us**
+### **Connect With Us**
 - **GitHub**: [@IsmailMoudden](https://github.com/IsmailMoudden)
 - **LinkedIn**: [Connect professionally](https://linkedin.com/in/ismailmoudden)
 - **Twitter**: [Follow for updates](https://twitter.com/ismailmoudden)
@@ -276,14 +276,14 @@ We welcome contributions from the community! This project thrives on collaborati
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 **What this means for you:**
-- ✅ **Use freely** for personal and commercial projects
-- ✅ **Modify and distribute** as you wish
-- ✅ **No warranty** provided (use at your own risk)
-- ✅ **Attribution appreciated** but not required
+- **Use freely** for personal and commercial projects
+- **Modify and distribute** as you wish
+- **No warranty** provided (use at your own risk)
+- **Attribution appreciated** but not required
 
 ---
 
-## 🙏 **Acknowledgments**
+## **Acknowledgments**
 
 ### **Open Source Community**
 - **Scikit-learn team** for the excellent ML library
@@ -292,14 +292,14 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **YFinance maintainers** for financial data access
 ---
 
-## 🚀 **Get Started Today!**
+## **Get Started Today!**
 
 Ready to embark on your machine learning journey with financial data?
 
-### **⭐ Star this repository** to show your support!
-### **🔗 Fork it** to start your own learning journey!
-### **🤝 Contribute** to help others learn!
-### **📚 Share** with fellow learners!
+### **Star this repository** to show your support!
+### **Fork it** to start your own learning journey!
+### ** Contribute** to help others learn!
+### **Share** with fellow learners!
 
 ---
 

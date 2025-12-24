@@ -70,13 +70,13 @@ Intro-To-ML-SP500-Prediction/
 
 ### **Advanced Data Pipeline**
 - **Automated data collection** from Yahoo Finance with intelligent caching
-- **50+ technical indicators** including RSI, MACD, Bollinger Bands, SMA/EMA
+- **Technical indicators** including RSI, MACD, Bollinger Bands, SMA/EMA
 - **Data preprocessing** with missing value handling and outlier detection
 - **Feature engineering** with lag features, rolling statistics, and interactions
 - **Temporal data handling** respecting time series integrity
 
 ### **Machine Learning Models**
-- **K-means Clustering**: Identify market regimes (bull/bear/sideways)
+- **K-means Clustering**: Identify market regimes
 - **Linear Regression**: Price prediction with technical indicators
 - **Random Forest**: Ensemble classification for market direction
 - **Cross-validation**: Time-series aware validation to prevent data leakage
@@ -87,7 +87,6 @@ Intro-To-ML-SP500-Prediction/
 - **Mathematical explanations** with formulas and derivations
 - **Practical examples** with real S&P 500 data
 - **Performance evaluation** guides and best practices
-- **Interactive notebooks** for hands-on learning
 
 ---
 
@@ -152,7 +151,7 @@ jupyter notebook notebooks/
 
 ## **Learning Path**
 
-### **🟢 Beginner Level (0-2 weeks)**
+### **🟢 Beginner Level**
 1. **Start Here**: Read `Learning_Resources/About_S&P500.md`
 2. **Data Basics**: Study `Learning_Resources/data_handling.md`
 3. **Run Examples**: Execute basic examples in each model directory
@@ -160,19 +159,18 @@ jupyter notebook notebooks/
 
 **Skills You'll Learn**: Basic Python, data loading, simple ML concepts
 
-### **🟡 Intermediate Level (2-6 weeks)**
+### **🟡 Intermediate Level**
 1. **Technical Analysis**: Master `Learning_Resources/technical_indicators.md`
 2. **Algorithm Theory**: Study `Learning_Resources/Models/` documentation
 3. **Customization**: Modify model parameters and add features
-4. **Analysis**: Use notebooks for exploratory data analysis
 
 **Skills You'll Learn**: Technical indicators, ML algorithms, data analysis
 
-### **🔴 Advanced Level (6+ weeks)**
+### **🔴 Advanced Level**
 1. **Innovation**: Create new ML algorithms and approaches
 2. **Backtesting**: Build custom trading strategy backtesting
 3. **Optimization**: Implement hyperparameter tuning
-4. **Deployment**: Deploy models in production environments
+4. **Real-world**: Understand limitations of ML models in real-world scenarios
 
 **Skills You'll Learn**: Advanced ML, backtesting, production deployment
 
@@ -182,24 +180,21 @@ jupyter notebook notebooks/
 
 ### **K-means Clustering Results**
 ![K-means Clustering](Clustering/kmeans_clusters.png)
-- **Market regime identification** (bull/bear/sideways markets)
+- **Market regime identification** clusters that can be interpreted as different market regimes
 - **Cluster visualization** with interactive plots
-- **Performance metrics** and strategy recommendations
-- **Risk assessment** for different market conditions
 
 ### **Prediction Model Results**
 ![Model Predictions](Clustering/kmeans_prediction.png)
 - **Price forecasts** with confidence intervals
-- **Direction classification** (up/down predictions)
+- **Direction classification** as an illustrative supervised learning task
 - **Model comparison** with performance metrics
 - **Feature importance** analysis
 
 ### **Technical Analysis Dashboard**
 ![Technical Analysis](Clustering/kmeans_elbow.png)
 - **Indicator charts** (RSI, MACD, Bollinger Bands)
-- **Signal generation** for trading strategies
+- **Signal generation**: Illustrative signal generation for educational purposes
 - **Risk assessment** and volatility analysis
-- **Portfolio optimization** insights
 
 ---
 
@@ -267,8 +262,6 @@ We welcome contributions from the community! This project thrives on collaborati
 ### **Connect With Us**
 - **GitHub**: [@IsmailMoudden](https://github.com/IsmailMoudden)
 - **LinkedIn**: [Connect professionally](https://linkedin.com/in/ismailmoudden)
-- **Twitter**: [Follow for updates](https://twitter.com/ismailmoudden)
-
 ---
 
 ## **License**
@@ -292,24 +285,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **YFinance maintainers** for financial data access
 ---
 
-## **Get Started Today!**
-
-Ready to embark on your machine learning journey with financial data?
-
-### **Star this repository** to show your support!
-### **Fork it** to start your own learning journey!
-### ** Contribute** to help others learn!
-### **Share** with fellow learners!
-
----
-
-## **Happy Learning!**
-
-*"The best investment you can make is in yourself." - Warren Buffett*
-
-*"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela*
-
----
 
 <div align="center">
 
@@ -317,7 +292,6 @@ Ready to embark on your machine learning journey with financial data?
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/IsmailMoudden/Intro-To-ML-SP500-Prediction)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![Scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
 
 </div>
